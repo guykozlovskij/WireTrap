@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2dfxw4dfjiau"]
+
+[ext_resource type="Texture2D" uid="uid://c2ac16gurd6a1" path="res://assets/player/spaceship.png" id="1_jefx5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n6ocq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jefx5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tjoea"]
+radius = 128.004
+
+[node name="Player" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_n6ocq")
+frame_progress = 0.64532
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tjoea")
