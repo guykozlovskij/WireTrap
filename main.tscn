@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2dfxw4dfjiau"]
+[gd_scene load_steps=5 format=3 uid="uid://b2dfxw4dfjiau"]
 
+[ext_resource type="Script" path="res://src/script/player.gd" id="1_854r5"]
 [ext_resource type="Texture2D" uid="uid://c2ac16gurd6a1" path="res://assets/player/spaceship.png" id="1_jefx5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n6ocq"]
@@ -14,15 +15,17 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tjoea"]
-radius = 128.004
+radius = 48.0
 
 [node name="Player" type="Area2D"]
-metadata/_edit_group_ = true
+position = Vector2(664, 384)
+script = ExtResource("1_854r5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.183333, 0.183333)
 sprite_frames = SubResource("SpriteFrames_n6ocq")
-frame_progress = 0.64532
+frame_progress = 0.486167
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.95, 0.95)
 shape = SubResource("CircleShape2D_tjoea")
