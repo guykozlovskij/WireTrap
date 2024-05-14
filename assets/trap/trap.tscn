@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clojas0h5c85v"]
 
 [node name="Trap Coil" type="RigidBody2D"]
+gravity_scale = 1.66533e-16
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
