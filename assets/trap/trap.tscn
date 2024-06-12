@@ -1,9 +1,30 @@
-[gd_scene format=3 uid="uid://clojas0h5c85v"]
+[gd_scene load_steps=4 format=3 uid="uid://clojas0h5c85v"]
+
+[ext_resource type="Texture2D" uid="uid://dd3chcpgq58hk" path="res://assets/trap/coil.png" id="1_7ny4h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yikwo"]
+radius = 32.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6x3oe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7ny4h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Trap Coil" type="RigidBody2D"]
+position = Vector2(584, 296)
 gravity_scale = 1.66533e-16
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yikwo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.2666e-05, -1.2666e-05)
+scale = Vector2(0.123438, 0.123438)
+sprite_frames = SubResource("SpriteFrames_6x3oe")

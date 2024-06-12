@@ -28,3 +28,12 @@ func _process(delta):
 
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+	
+	var coil = preload("res://assets/trap/trap.tscn")
+	var coil_instance = coil.instantiate()
+	coil_instance.position = position
+	
+#TODO: action may need to be changed 
+	if Input.is_action_just_pressed("place_trap"):
+		add_child(coil_instance)
+		
